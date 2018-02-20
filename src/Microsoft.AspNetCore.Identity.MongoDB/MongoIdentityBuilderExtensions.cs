@@ -64,13 +64,16 @@ namespace Microsoft.Extensions.DependencyInjection
 			builder.Services.AddSingleton<IRoleStore<TRole>>(p => new RoleStore<TRole>(rolesCollectionFactory(p)));
 			return builder;
 		}
-
-		/// <summary>
-		///     This method registers identity services and MongoDB stores using the IdentityUser and IdentityRole types.
-		/// </summary>
-		/// <param name="services"></param>
-		/// <param name="connectionString">Connection string must contain the database name</param>
-		public static IdentityBuilder AddIdentityWithMongoStores(this IServiceCollection services, string connectionString)
+        public static IdentityBuilder AddIdentityWithMongoStores<TUser>(this IServiceCollection services, string connectionString) where TUser : IdentityUser
+        {
+            return services.AddIdentityWithMongoStoresUsingCustomTypes<TUser, IdentityRole>(connectionString);
+        }
+        /// <summary>
+        ///     This method registers identity services and MongoDB stores using the IdentityUser and IdentityRole types.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="connectionString">Connection string must contain the database name</param>
+        public static IdentityBuilder AddIdentityWithMongoStores(this IServiceCollection services, string connectionString)
 		{
 			return services.AddIdentityWithMongoStoresUsingCustomTypes<IdentityUser, IdentityRole>(connectionString);
 		}
