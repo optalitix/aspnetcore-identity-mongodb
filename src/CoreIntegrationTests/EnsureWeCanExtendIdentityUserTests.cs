@@ -3,11 +3,12 @@
 	using System.Linq;
 	using System.Threading.Tasks;
 	using Microsoft.AspNetCore.Identity;
-	using Microsoft.AspNetCore.Identity.MongoDB;
 	using Microsoft.Extensions.DependencyInjection;
 	using NUnit.Framework;
+    using IdentityRole = Microsoft.AspNetCore.Identity.MongoDB.IdentityRole;
+    using IdentityUser = Microsoft.AspNetCore.Identity.MongoDB.IdentityUser;
 
-	[TestFixture]
+    [TestFixture]
 	public class EnsureWeCanExtendIdentityUserTests : UserIntegrationTestsBase
 	{
 		private UserManager<ExtendedIdentityUser> _Manager;

@@ -1,10 +1,10 @@
 ﻿namespace IntegrationTests
 {
 	using System;
-	using Microsoft.AspNetCore.Builder;
 	using Microsoft.AspNetCore.Identity;
-	using Microsoft.AspNetCore.Identity.MongoDB;
-	using Microsoft.Extensions.DependencyInjection;
+    using IdentityRole = Microsoft.AspNetCore.Identity.MongoDB.IdentityRole;
+    using IdentityUser = Microsoft.AspNetCore.Identity.MongoDB.IdentityUser;
+    using Microsoft.Extensions.DependencyInjection;
 	using MongoDB.Driver;
 	using NUnit.Framework;
 

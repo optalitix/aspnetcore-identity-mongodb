@@ -6,6 +6,8 @@ namespace Microsoft.Extensions.DependencyInjection
     using AspNetCore.Identity;
     using AspNetCore.Identity.MongoDB;
     using MongoDB.Driver;
+    using IdentityRole = AspNetCore.Identity.MongoDB.IdentityRole;
+    using IdentityUser = AspNetCore.Identity.MongoDB.IdentityUser;
 
     public static class MongoIdentityBuilderExtensions
     {

@@ -1,11 +1,12 @@
 ﻿namespace CoreTests
 {
 	using Microsoft.AspNetCore.Identity;
-	using Microsoft.AspNetCore.Identity.MongoDB;
 	using Microsoft.Extensions.DependencyInjection;
 	using NUnit.Framework;
+    using IdentityRole = Microsoft.AspNetCore.Identity.MongoDB.IdentityRole;
+    using IdentityUser = Microsoft.AspNetCore.Identity.MongoDB.IdentityUser;
 
-	[TestFixture]
+    [TestFixture]
 	public class MongoIdentityBuilderExtensionsTests : AssertionHelper
 	{
 		private const string FakeConnectionStringWithDatabase = "mongodb://fakehost:27017/database";

@@ -7,9 +7,11 @@
 	using Microsoft.AspNetCore.Identity.MongoDB;
 	using Microsoft.Extensions.DependencyInjection;
 	using NUnit.Framework;
+    using IdentityRole = Microsoft.AspNetCore.Identity.MongoDB.IdentityRole;
+    using IdentityUser = Microsoft.AspNetCore.Identity.MongoDB.IdentityUser;
 
-	// todo low - validate all tests work
-	[TestFixture]
+    // todo low - validate all tests work
+    [TestFixture]
 	public class UserLockoutStoreTests : UserIntegrationTestsBase
 	{
 		[Test]

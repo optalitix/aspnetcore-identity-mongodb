@@ -3,8 +3,9 @@
 	using System.Linq;
 	using System.Threading.Tasks;
 	using Microsoft.AspNetCore.Identity;
-	using Microsoft.AspNetCore.Identity.MongoDB;
-	using NUnit.Framework;
+    using IdentityRole = Microsoft.AspNetCore.Identity.MongoDB.IdentityRole;
+    using IdentityUser = Microsoft.AspNetCore.Identity.MongoDB.IdentityUser;
+    using NUnit.Framework;
 
 	// todo low - validate all tests work
 	[TestFixture]
